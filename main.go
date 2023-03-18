@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	"net/http"
-	"github.com/KarimNMG/GoStudy/controllers"
+	//"github.com/KarimNMG/GoStudy/controllers"
 )
 
 func startWebServer(port int, number int) (int, error) {
@@ -13,8 +12,42 @@ func startWebServer(port int, number int) (int, error) {
 }
 func main() {
 
-	controllers.RegisterControllers()
-	http.ListenAndServe(":3000", nil)
+	///---------------Panic functions
+	
+
+	//--------------LOOPs-------------------
+
+	// mp1 := map[string]int {"http":70, "https":4010}
+	// for k, v := range(mp1) {
+	// 	println(k, v)
+	// }
+
+	// slice := []int{5, 6, 7}
+
+	// for i, v := range slice {
+	// 	println(i, v)
+	// 	// very good for mapp
+	// }
+
+	// for i := 0; i < len(slice); i++ {
+	// 	println(slice[i])
+	// }
+
+	// for i := 0; i < 5; i++ {
+	// 	println("i", i)
+	// }
+
+	// var j int
+	// for j < 5 {
+	// 	println("j", j)
+	// 	j++
+	// 	if j == 3 {
+	// 		break
+	// 	}
+	// }
+	///-------------------controllers , constructors,
+	// controllers.RegisterControllers()
+	// http.ListenAndServe(":3000", nil)
 	//-------------------functions----------------------
 	// port := 2000
 	// _, err := startWebServer(port, 55)

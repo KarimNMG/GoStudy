@@ -14,7 +14,8 @@ func main() {
 
 	///---------------Panic functions
 	
-
+	
+	
 	//--------------LOOPs-------------------
 
 	// mp1 := map[string]int {"http":70, "https":4010}

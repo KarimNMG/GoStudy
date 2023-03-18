@@ -2,19 +2,34 @@ package main
 
 import (
 	"fmt"
-	"user"
+	"net/http"
+	"github.com/KarimNMG/GoStudy/controllers"
 )
 
+func startWebServer(port int, number int) (int, error) {
+	fmt.Println("web server has started...", port)
+	fmt.Println("Success", number)
+	return port, nil
+}
 func main() {
 
-	u := user.User{
-		Id:        1,
-		FirstName: "Karim",
-		LastName:  "Abdelatif",
-	}
-	fmt.Printf(u)
-	//fmt.Println("Hellow world")
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil)
+	//-------------------functions----------------------
+	// port := 2000
+	// _, err := startWebServer(port, 55)
+	// fmt.Println(err)
+	//---------------------------------------
+	// structs from other file
+	// u := models.User{
+	// 	Id:        1,
+	// 	FirstName: "Karim",
+	// 	LastName:  "Abdelatif",
+	// }
 
+	// fmt.Printf(u.FirstName)
+	//fmt.Println("Hellow world")
+	//--------------------------------------------------
 	// var pi float32 = 3.14
 	// fmt.Println(pi)
 
